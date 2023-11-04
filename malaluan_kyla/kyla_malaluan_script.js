@@ -1,16 +1,20 @@
-let commentForm = document.getElementById("commentForm");
+let commentForm = document.getElementById("comment_form");
 let nameInput = document.getElementById("name");
 let commentInput = document.getElementById("comment");
-let commentButton = document.getElementById("addComment");
+let commentsList = document.getElementById("comments_list");
 
+commentForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
+    let name = nameInput.value;
+    let comment = commentInput.value;
 
-nameInput.addEventListener("input", updateCommentButtonState);
-commentInput.addEventListener("input", updateCommentButtonState);
+    if (name && comment) {
+        let newComment = document.createElement("li");
+        newComment.textContent = `${name}: ${comment}`;
+        commentsList.appendChild(newComment);
 
-function updateCommentButtonState()
-{
-    let nameText = nameInput.value.trim();
-    let commentText = commentInput.value.trim();
-    commentButton.disabled = !(nameText && commentText);
-}
+        nameInput.value = "";
+        commentInput.value = "";
+    }
+});

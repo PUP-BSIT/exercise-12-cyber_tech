@@ -51,11 +51,12 @@ a:hover {
 }
 
 img {
-  width: calc(50% - 5px);
+  width: calc(30% - 3px);
   height: auto;
   margin-bottom: 10px;
+  border: 4.5px solid #000000;
+  border-radius: 18px;
 }
-
 
 section {
   background-color: #efa1a1;
@@ -65,7 +66,7 @@ section {
   border-bottom: 6px solid #ccc;
 }
 
-#comments-list {
+#comments_list {
   list-style-type: none;
   margin-bottom: 10px;
   padding: 10px;
@@ -74,23 +75,23 @@ section {
   align-items: center;
 }
 
-#comment-form {
+#comment_form {
   margin-top: 20px;
-  border: 1px solid #ccc;
+  border: 3px solid #ccc;
   padding: 10px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
 }
 
-#comment-form label,
-#comment-form textarea,
-#comment-form input[type="text"] {
+#comment_form label,
+#comment_form textarea,
+#comment_form input[type="text"] {
   display: block;
   margin-bottom: 10px;
 }
 
-#comment-button {
+#comment_button {
   background-color: #3498db;
   color: #fff;
   border: none;
@@ -99,7 +100,7 @@ section {
   cursor: pointer;
 }
 
-#comment-button:disabled {
+#comment_button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }

@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", init);
+
+function init() {
     // Get the form elements
     const nameInput = document.getElementById("name");
     const commentText = document.getElementById("comment_text");
@@ -34,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             username.textContent = `${name}:`;
 
             const commentPara = document.createElement("p");
-            commentPara.classList.add("comment-text");
+            commentPara.classList.add("comment");
             commentPara.textContent = comment;
 
             // Append paragraphs to the user profile and comment content divs
@@ -57,10 +59,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Function to handle form input
+    function handleInput() {
+        checkFields();
+    }
+
+    // Function to handle form submission
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+        addComment();
+    }
+
     // Add event listeners to input fields
-    nameInput.addEventListener("input", checkFields);
-    commentText.addEventListener("input", checkFields);
+    nameInput.addEventListener("input", handleInput);
+    commentText.addEventListener("input", handleInput);
 
     // Add an event listener to the comment button
-    commentButton.addEventListener("click", addComment);
-});
+    commentButton.addEventListener("click", handleSubmit);
+}

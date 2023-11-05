@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.getElementById("name");
     const commentInput = document.getElementById("comment");
-    const commentButton = document.getElementById("comment-button");
-    const commentsList = document.getElementById("comments-list");
+    const commentButton = document.getElementById("comment_button");
+    const commentsList = document.getElementById("comments_list");
 
     nameInput.addEventListener("input", updateCommentButtonState);
     commentInput.addEventListener("input", updateCommentButtonState);

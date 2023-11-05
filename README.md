@@ -9,4 +9,4 @@ together, whether it's on professional projects or pursuing our shared hobbies.
 On this site, you can explore our past and ongoing works, including projects, 
 articles, and personal achievements."
 
-[![Netlify URL Exercise 12]] https://cybertech-exercise12.netlify.app
+Netlify URL Exercise 12: https://cybertech-exercise12.netlify.app
